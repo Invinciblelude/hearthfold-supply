@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hearthfold Supply — 21+</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <div class="gate-card">
+      <p class="eyebrow">Age check</p>
+      <h2>Are you 21 or older?</h2>
+      <p>Legal tobacco accessories only. No nicotine, vapes, or cannabis.</p>
+      <div class="actions">
+        <button class="yes" type="button" id="btn-yes">I am 21+</button>
+        <button class="no" type="button" id="btn-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-wrap" id="cart-drawer" hidden>
+    <aside class="drawer">
+      <p class="eyebrow">Bag</p>
+      <h2>Your kit</h2>
+      <div id="cart-lines"></div>
+      <p class="price">Total <span id="cart-total">$0.00</span></p>
+      <p>Card checkout is not live on this demo. Copy the bag and fulfill after a high-risk processor is approved — see <a href="sell.html">How to sell this</a>.</p>
+      <div class="actions">
+        <a class="yes" href="sell.html" style="text-decoration:none;display:inline-block;">Open checkout plan</a>
+        <button class="no" type="button" id="close-cart">Keep shopping</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <p class="banner">Hearthfold is the brand. This page is the storefront. Money still needs a high-risk merchant account — Shopify Payments, Stripe, and PayPal will shut this category off.</p>
+    <div class="nav">
+      <div>
+        <a href="index.html">Shop</a>
+        <a href="rolling-tray.html">Lid tray</a>
+        <a href="smell-proof-bag.html">Smell proof</a>
+        <a href="turkey-bags.html">Turkey bags</a>
+        <a href="age.html">Age</a>
+        <a href="sell.html">Launch</a>
+      </div>
+      <button class="cart-btn" type="button" id="open-cart">Bag <span id="cart-count">0</span></button>
+    </div>
+    <header>
+      <div>
+        <p class="eyebrow">Hearthfold Supply</p>
+        <h1>Rolling kit, not a smoke shop mall</h1>
+      </div>
+      <p class="lede">Six SKUs. US warehouse dropship. 21+ only. Your own name — not Zig-Zag.</p>
+    </header>
+
+    <section class="kit">
+      <img src="images/demo-tray.png" alt="Starter kit tray" />
+      <div>
+        <p class="kicker">Best first offer</p>
+        <h2>Starter kit — $39</h2>
+        <p>Lid tray + hemp papers + 32 cones. One box, one problem solved. This is what you sell first, not 200 random pipes.</p>
+        <p class="merchant">You pay ~$13–20 landed. About $19–26 gross before processor fees and shipping to the customer.</p>
+        <button class="add" type="button" data-add="kit" style="margin-top:14px;">Add starter kit</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <article>
+        <img src="images/demo-grinder.png" alt="Four-piece charcoal metal grinder" />
+        <div class="body">
+          <p class="kicker">Margin</p>
+          <h2>Four-piece mill</h2>
+          <p class="price">$24.00 <span>retail</span></p>
+          <p>Aluminum mill with a catch chamber. Photographs well. Not tobacco, so it is the safest SKU for processors.</p>
+          <p class="merchant">Landed ~$8–11</p>
+          <button class="add" type="button" data-add="mill">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-tray.png" alt="Black metal rolling tray with magnetic lid" />
+        <div class="body">
+          <p class="kicker">Hero</p>
+          <h2>Lid tray</h2>
+          <p class="price">$28.00 <span>retail</span></p>
+          <p>Metal tray with a magnetic lid. Sells as travel gear, not a $6 novelty.</p>
+          <p class="merchant">Landed ~$9–13</p>
+          <button class="add" type="button" data-add="tray">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-bag.png" alt="Charcoal smell-proof zip pouch" />
+        <div class="body">
+          <p class="kicker">Search</p>
+          <h2>Odor pouch</h2>
+          <p class="price">$18.00 <span>retail</span></p>
+          <p>Carbon-lined pouch. Copy is gym bag and travel — not hiding product from police.</p>
+          <p class="merchant">Landed ~$5–8</p>
+          <button class="add" type="button" data-add="pouch">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-papers.png" alt="Unbranded natural hemp rolling papers booklet" />
+        <div class="body">
+          <p class="kicker">Reorder</p>
+          <h2>Hemp papers</h2>
+          <p class="price">$4.50 <span>booklet</span></p>
+          <p>Unbranded or licensed (RAW, OCB, Elements, genuine Zig-Zag from an authorized wholesaler).</p>
+          <p class="merchant">Landed ~$1–2</p>
+          <button class="add" type="button" data-add="papers">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-cones.png" alt="Unbranded pre-rolled paper cones" />
+        <div class="body">
+          <p class="kicker">Reorder</p>
+          <h2>Pre-roll cones</h2>
+          <p class="price">$12.00 <span>32-pack</span></p>
+          <p>98mm / 109mm. No strain names on the listing.</p>
+          <p class="merchant">Landed ~$3–5</p>
+          <button class="add" type="button" data-add="cones">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-jar.png" alt="Amber glass jar with cleaning brush and pipe screens" />
+        <div class="body">
+          <p class="kicker">Add-on</p>
+          <h2>Jar + clean kit</h2>
+          <p class="price">$22.00 <span>set</span></p>
+          <p>Jar, brush, screens. Raises the ticket. Cleaner reorders.</p>
+          <p class="merchant">Landed ~$7–10</p>
+          <button class="add" type="button" data-add="jar">Add to bag</button>
+        </div>
+      </article>
+    </div>
+
+    <header style="margin-top:36px">
+      <div>
+        <p class="eyebrow">Storage</p>
+        <h1>Turkey bags, pouches, mylar — kitchen sizes</h1>
+      </div>
+      <p class="lede">This is the “zips / ounces / lbs” demand. List sandwich, quart, gallon, and oven bags. Do not print street weights or cannabis leaves.</p>
+    </header>
+    <section class="kit">
+      <img src="images/demo-bag.png" alt="Odor pouch" />
+      <div>
+        <p class="kicker">Storage kit — $29</p>
+        <h2>Pouch + oven bags + carbon refills</h2>
+        <p>One problem: odor. Three SKUs that reorder. Same customer as the mill, different cart.</p>
+        <p class="merchant">Landed ~$9–16. Push this next to the $39 rolling kit.</p>
+        <button class="add" type="button" data-add="turkey" style="margin-top:14px;">Add oven bags</button>
+      </div>
+    </section>
+    <div class="grid">
+      <article>
+        <img src="images/demo-bag.png" alt="Small odor pouch" />
+        <div class="body">
+          <p class="kicker">Small</p>
+          <h2>Odor pouch — small</h2>
+          <p class="price">$14.00</p>
+          <p>Pocket / daily carry. Not titled “ounce bag.”</p>
+          <p class="merchant">Landed ~$4–6</p>
+          <button class="add" type="button" data-add="pouch-s">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-bag.png" alt="Large odor pouch" />
+        <div class="body">
+          <p class="kicker">Large</p>
+          <h2>Odor pouch — large</h2>
+          <p class="price">$28.00</p>
+          <p>The size people mean when they say a “pound bag” — sold as travel/gym.</p>
+          <p class="merchant">Landed ~$8–11</p>
+          <button class="add" type="button" data-add="pouch-l">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-bag.png" alt="Oven turkey bags" />
+        <div class="body">
+          <p class="kicker">Reorder</p>
+          <h2>Oven / turkey bags 10-pack</h2>
+          <p class="price">$14.00</p>
+          <p>Nylon oven bags. Camping leftovers, roasting, odor. The actual turkey-bag SKU.</p>
+          <p class="merchant">Landed ~$3–6</p>
+          <button class="add" type="button" data-add="turkey">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-bag.png" alt="Mylar zipper bags" />
+        <div class="body">
+          <p class="kicker">Bulk food</p>
+          <h2>Mylar zipper 50-pack</h2>
+          <p class="price">$16.00</p>
+          <p>Unprinted sandwich / quart / gallon. Coffee, spices, freeze-dried food. No 1oz weed print.</p>
+          <p class="merchant">Landed ~$4–7</p>
+          <button class="add" type="button" data-add="mylar">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-bag.png" alt="Carbon refills" />
+        <div class="body">
+          <p class="kicker">Consumable</p>
+          <h2>Carbon refills 4-pack</h2>
+          <p class="price">$12.00</p>
+          <p>Replacement packs for the pouches. Email at 90 days.</p>
+          <p class="merchant">Landed ~$2–4</p>
+          <button class="add" type="button" data-add="carbon">Add to bag</button>
+        </div>
+      </article>
+      <article>
+        <img src="images/demo-bag.png" alt="Odor backpack" />
+        <div class="body">
+          <p class="kicker">High ticket</p>
+          <h2>Odor backpack</h2>
+          <p class="price">$59.00</p>
+          <p>One sale covers a month of Shopify. Travel bag, not a “trap bag.”</p>
+          <p class="merchant">Landed ~$18–26</p>
+          <button class="add" type="button" data-add="pack">Add to bag</button>
+        </div>
+      </article>
+    </div>
+
+    <section class="skip">
+      <h3>Still not for sale here</h3>
+      <ul>
+        <li>Vapes and e-liquid (Shopify ENDS ban)</li>
+        <li>Cigarettes, loose tobacco, nicotine pouches</li>
+        <li>Cannabis flower, carts, edibles</li>
+        <li>Printed 1 oz / 1 lb cannabis bags, dime bags, dealer scales</li>
+        <li>Zig-Zag branded storefront or counterfeit papers</li>
+      </ul>
+    </section>
+    <footer>
+      21+ tobacco accessories. Not affiliated with Republic Technologies or Turning Point Brands. Not a live merchant account.
+    </footer>
+  </div>
+  <script src="js/store.js"></script>
+</body>
+</html>

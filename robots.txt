@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://invinciblelude.github.io/hearthfold-supply/sitemap.xml
